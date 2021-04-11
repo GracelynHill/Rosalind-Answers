@@ -5,7 +5,7 @@ fastalengths = {}
 with open('rosalind_frmt.txt') as file:
   for line in file:
     genbanklist = line.split(' ')
-Entrez.email = "ghill@gwu.edu"
+Entrez.email = "" #your email here
 handle = Entrez.efetch(db="nucleotide", id=genbanklist, rettype="fasta")
 record = list (SeqIO.parse(handle, "fasta")) #we get the list of SeqIO objects in FASTA format
 shortest = 0
